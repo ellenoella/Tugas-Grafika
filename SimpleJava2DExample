@@ -1,0 +1,22 @@
+import java.awt.*;
+
+public class SimpleJava2DExample extends Frame {
+    SimpleJava2DExample() {
+        addWindowListener(new MyFinishWindow());
+    }
+
+    public void paint(Graphics g) {
+        // Graphics G = untuk memanggil data grafik G
+
+        Graphics2D g2d = (Graphics2D) g;
+        g2d.drawString("Hello Word", 30, 50);
+    }
+
+    public static void main(String[] args) {
+        SimpleJava2DExample f = new SimpleJava2DExample();
+        f.setTitle("the First Java 2D Program");
+        f.setSize(350, 80);
+        f.setVisible(true);
+    }
+
+}
